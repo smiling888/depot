@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Product.delete_all
+#...
+Product.create(:title=>'ruby programme ruby 1.9',
+	:description=>
+	%{<p>
+ruby is d fastd toolbox
+	
+	</p>},
+	:image_url=>'/images/avril.jpg',
+	:price=>15.5
+	)
