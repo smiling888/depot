@@ -1,4 +1,5 @@
 class LineItemsController < ApplicationController
+  skip_before_filter :authorize, :only=> :create
   # GET /line_items
   # GET /line_items.json
   def index
@@ -47,7 +48,7 @@ class LineItemsController < ApplicationController
     #@line_item= @cart.line_items.build(:product => product)
     respond_to do |format|
       if @line_item.save
-        format.html{redirect_to (store_url)}
+        format.html{redirect_to (@line_item.cart)}
         format.js {@current_item=@line_item}
         #format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
         format.xml { render xml: @line_item, status: :created, location: @line_item }
