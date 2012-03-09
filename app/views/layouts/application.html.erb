@@ -2,9 +2,11 @@
 <html>
 <head>
 	<title>Pragprog Books Online Store</title>
+	<%= stylesheet_link_tag "application" %>
 	<%= stylesheet_link_tag "scaffold" %>
 	<%= stylesheet_link_tag "depot" , :media => "all" %>
 	<%= javascript_include_tag :defaults %>
+	<%= javascript_include_tag "application" %>
 	<%= csrf_meta_tag %>
 </head>
 
@@ -15,15 +17,13 @@
 	</div>
 	<div id="columns">
 		<div id="side">
-			<div id="cart">
 			
-			</div>
 
-			<a href="http://localhost:3000">Home</a><br />
+			<a href="http://192.168.16.123">Home</a><br />
 			<a href="http://www..../faq">Questions</a><br />
 			<a href="http://www..../news">News</a><br />
 			<a href="http://www..../contact">Contact</a><br />
-
+			<%= link_to 'New User', new_user_path %>
 			<% if session[:user_id] %>
 			<br />
 			<%= link_to 'Orders',orders_path %><br />

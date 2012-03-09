@@ -6,7 +6,10 @@ gem 'rails', '3.2.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+group :production do
+  gem 'mysql'
+end
+gem 'rake', '0.9.2.2'
 gem 'will_paginate','~>3.0.pre'
 
 # Gems used only for assets and not required
@@ -22,6 +25,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

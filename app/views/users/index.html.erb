@@ -2,7 +2,7 @@
 
 <% if notice %>
   <p id="notice"><%= notice %></p>
-  <% end -%>
+  <% end %>
 <table>
   <tr>
     <th>Name</th>
@@ -20,7 +20,7 @@
     <td><%= user.salt %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', :method=> :delete %></td>
   </tr>
 <% end %>
 </table>
